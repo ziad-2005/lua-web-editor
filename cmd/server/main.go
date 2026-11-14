@@ -13,6 +13,6 @@ func main() {
 
 	log.Println("Server starting on port 8080...")
 	if err := http.ListenAndServe(":8080", mux); err != nil {
-		log.Fatal("Server failed: %v", err)
+		log.Fatalf("Server failed: %v", err)
 	}
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua Runner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lua Runner</h1>
+            <p>Write and execute Lua code securely in your browser.</p>
+        </header>
+
+        <main class="workspace">
+            <section class="editor-section">
+                <div class="toolbar">
+                    <h2>Code</h2>
+                    <button id="run-btn" class="btn primary">Run Code</button>
+                </div>
+                <textarea id="code-editor" placeholder="print('Hello, World!')">print("Hello, World!")</textarea>
+            </section>
+
+            <section class="output-section">
+                <h2>Output</h2>
+                <div id="status-bar" class="status-bar idle">Status: Ready</div>
+                
+                <div class="output-group">
+                    <label>Standard Output (stdout)</label>
+                    <pre id="stdout" class="output-box"></pre>
+                </div>
+
+                <div class="output-group">
+                    <label>Standard Error (stderr)</label>
+                    <pre id="stderr" class="output-box error"></pre>
+                </div>
+
+                <div class="meta-info">
+                    <span>Exit Code: <strong id="exit-code">-</strong></span>
+                    <span>Duration: <strong id="duration">-</strong> ms</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
